@@ -36,7 +36,7 @@
 		{:else if part.newline}
 			<br>
 		{:else}
-			<div class="part ante" on:click={event => lookup(part.ante, event)}>{part.ante}</div>
+			<span class="part ante" on:click={event => lookup(part.ante, event)}>{part.ante}</span>
 		{/if}
 	{/each}
 </div>
