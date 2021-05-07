@@ -3,7 +3,7 @@
 </script>
 
 <script>
-	import Entry from '$lib/Entry/index.svelte'
+	import Input from '$lib/Input/index.svelte'
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-	<Entry />
+	<Input />
 </section>
 
 <style>
