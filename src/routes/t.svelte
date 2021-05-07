@@ -6,7 +6,7 @@
 		dictionary = context.dictionary
 		query = page.query.get("q")
 		
-		return query ? true : { redirect: '/' }
+		return query ? true : { status: 302, redirect: '/' }
 	}
 </script>
 
