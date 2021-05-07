@@ -12,12 +12,12 @@ const dictionary = JSON.parse(nimi).map((entry) => {
 		name: entry.word,
 		// synonyms: [],
 		definition: {
-			official: entry.definition
+			official: entry.definition,
 			// alternative: "",
 		},
 		// see: [],
 		// Make categories "pre", "pu" and "post"
-		category: entry.category.replace('-pu', '')
+		category: entry.category.replace('-pu', ''),
 	};
 
 	// Split words with synonyms as part of name

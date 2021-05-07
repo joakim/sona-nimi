@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-		<Entry />
+	<Entry />
 </section>
 
 <style>

@@ -48,6 +48,6 @@
 	}
 
 	.ante {
-    white-space: pre;
+		white-space: pre;
 	}
 </style>

@@ -5,13 +5,13 @@
 	export async function load({ page, context }) {
 		dictionary = context.dictionary
 
-    query = page.query.get("q")
-    if (!query) {
-      return {
-        status: 302,
-        redirect: '/',
-      }
-    }
+		query = page.query.get("q")
+		if (!query) {
+			return {
+				status: 302,
+				redirect: '/',
+			}
+		}
 
 		return true
 	}
@@ -26,7 +26,7 @@
 </svelte:head>
 
 <section>
-  <Translation {dictionary} {query} />
+	<Translation {dictionary} {query} />
 </section>
 
 <style>
