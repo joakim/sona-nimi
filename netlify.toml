@@ -2,3 +2,8 @@
 	command = "npm run build"
 	publish = "build/"
 	functions = "functions/"
+
+[[redirects]]
+	from = https://toki-ante.netlify.app/*
+	to = https://sona-nimi.netlify.app/:splat
+	status = 302
