@@ -4,16 +4,9 @@
 
 	export async function load({ page, context }) {
 		dictionary = context.dictionary
-
 		query = page.query.get("q")
-		if (!query) {
-			return {
-				status: 302,
-				redirect: '/',
-			}
-		}
-
-		return true
+		
+		return query ? true : { redirect: '/' }
 	}
 </script>
 

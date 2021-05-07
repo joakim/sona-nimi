@@ -1,5 +1,6 @@
 <script>
 	export let word
+	
 	let definition = (word.definition.official || word.definition.alternative)
 </script>
 

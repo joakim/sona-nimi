@@ -43,7 +43,7 @@
 </script>
 
 <script>
-	import '../app.css';
+	import '../app.css'
 </script>
 
 <svelte:window on:keydown={handleKeyDown} on:keyup={handleKeyUp}/>

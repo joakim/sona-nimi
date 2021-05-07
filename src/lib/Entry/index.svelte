@@ -1,5 +1,5 @@
 <script>
-	import { goto } from '$app/navigation';
+	import { goto } from '$app/navigation'
 
 	let text = ''
 
@@ -9,6 +9,7 @@
 </script>
 
 <textarea class="input" bind:value={text} autofocus></textarea>
+
 <button class="btn" on:click={translate} disabled={text.length === 0}>oko</button>
 
 <style>
