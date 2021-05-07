@@ -1,15 +1,24 @@
 <script>
+	import { tick } from 'svelte'
 	import { goto } from '$app/navigation'
 
 	export let query = ''
-	let placeholder = 'toki!  This tool is for looking up the meaning of words in a Toki Pona text.  Click here to enter or paste some Toki Pona, then press oko.  You can then move the mouse cursor over the words to see their meanings.'
+	let placeholder = ''
 
 	function translate() {
 		goto('/t/?q=' + encodeURIComponent(query))
 	}
+	
+	// Set the placeholder in code as a workaround to get multiline text,
+	// and after loading to prevent flashing of unformatted text
+	async function setPlaceholder() {
+		await tick()
+		placeholder = 'toki!\n\nThis tool is for looking up the meaning of words in a Toki Pona text.\n\nClick here to enter or paste some Toki Pona, then press the button.\n\nYou can then move the mouse cursor over the words to see their meanings.'
+	}
+	setPlaceholder()
 </script>
 
-<textarea class="input" bind:value={query} placeholder={placeholder.replace(/  /g, "\n\n")}></textarea>
+<textarea class="input" bind:value={query} placeholder={placeholder}></textarea>
 
 <button class="btn" on:click={translate} disabled={query.length === 0}>o lukin</button>
 
