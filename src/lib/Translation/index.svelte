@@ -9,8 +9,12 @@
 
 	// Differentiate between toki pona words, newlines and other (ante) parts
 	const parts = query.trim().match(re).map(part => {
-		if (dictionary.has(part)) {
-			return dictionary.get(part)
+		const lowercased = part.toLowerCase()
+		if (dictionary.has(lowercased)) {
+			return {
+				verbatim: part,
+				...dictionary.get(lowercased)
+			}
 		}
 		else if (part === "\n") {
 			return { newline: true }
@@ -31,7 +35,7 @@
 
 <div class="translation">
 	{#each parts as part}
-		{#if part.name}
+		{#if part.verbatim}
 			<Word word={part} />
 		{:else if part.newline}
 			<br>

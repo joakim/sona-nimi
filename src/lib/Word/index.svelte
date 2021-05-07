@@ -4,7 +4,7 @@
 	let definition = (word.definition.official || word.definition.alternative)
 </script>
 
-<dfn class="part nimi" data-info="{definition}">{ word.name }</dfn>
+<dfn class="part nimi" data-info="{definition}">{ word.verbatim }</dfn>
 
 <style>
 .nimi {
