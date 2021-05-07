@@ -2,13 +2,14 @@
 	import { goto } from '$app/navigation'
 
 	let text = ''
+	let placeholder = 'toki!\n\nThis tool is for looking up the meaning of words in a Toki Pona text.\n\nClick here to enter or paste some Toki Pona, then press oko.\n\nYou can then move the mouse cursor over the words to see their meanings.'
 
 	function translate() {
 		goto('/t/?q=' + encodeURIComponent(text))
 	}
 </script>
 
-<textarea class="input" bind:value={text} autofocus></textarea>
+<textarea class="input" bind:value={text} placeholder={placeholder}></textarea>
 
 <button class="btn" on:click={translate} disabled={text.length === 0}>oko</button>
 
@@ -20,6 +21,10 @@
 	font-size: 1em;
 	border: 1px solid var(--primary-color);
 	border-radius: 4px;
+}
+
+.input:focus::placeholder {
+	color: transparent;
 }
 
 .btn {
