@@ -52,6 +52,7 @@
 	}
 
 	.ante {
+		color: rgba(0, 0, 0, 0.66);
 		white-space: pre;
 	}
 </style>
