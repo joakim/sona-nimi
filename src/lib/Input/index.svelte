@@ -1,17 +1,17 @@
 <script>
 	import { goto } from '$app/navigation'
 
-	let text = ''
+	export let query = ''
 	let placeholder = 'toki!\n\nThis tool is for looking up the meaning of words in a Toki Pona text.\n\nClick here to enter or paste some Toki Pona, then press oko.\n\nYou can then move the mouse cursor over the words to see their meanings.'
 
 	function translate() {
-		goto('/t/?q=' + encodeURIComponent(text))
+		goto('/t/?q=' + encodeURIComponent(query))
 	}
 </script>
 
-<textarea class="input" bind:value={text} placeholder={placeholder}></textarea>
+<textarea class="input" bind:value={query} placeholder={placeholder}></textarea>
 
-<button class="btn" on:click={translate} disabled={text.length === 0}>oko</button>
+<button class="btn" on:click={translate} disabled={query.length === 0}>o lukin</button>
 
 <style>
 .input {
@@ -25,41 +25,5 @@
 
 .input:focus::placeholder {
 	color: transparent;
-}
-
-.btn {
-	background: #3498db;
-	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-	background-image: -o-linear-gradient(top, #3498db, #2980b9);
-	background-image: linear-gradient(to bottom, #3498db, #2980b9);
-	-webkit-border-radius: 4;
-	-moz-border-radius: 4;
-	border-radius: 4px;
-	font-size: 1.1em;
-	text-shadow: 1px 1px 0px #666666;
-	color: #ffffff;
-	padding: 0.75em 2em 0.75em 2em;
-	text-decoration: none;
-	border: none;
-	cursor: pointer;
-	margin-top: 2em;
-}
-
-.btn:hover {
-	background: #3cb0fd;
-	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-	text-decoration: none;
-}
-
-.btn:disabled {
-	background: #3498db;
-	opacity: 0.6;
-	cursor: inherit;
 }
 </style>

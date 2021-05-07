@@ -11,7 +11,12 @@
 </script>
 
 <script>
+	import { goto } from '$app/navigation'
 	import Translation from '$lib/Translation/index.svelte'
+	
+	function edit() {
+		goto('/?q=' + encodeURIComponent(query))
+	}
 </script>
 
 <svelte:head>
@@ -19,7 +24,10 @@
 </svelte:head>
 
 <section>
-	<Translation {dictionary} {query} />
+	<div class="output">
+		<Translation {dictionary} {query} />
+	</div>
+	<button class="edit" on:click={edit}>o ante</button>
 </section>
 
 <style>
@@ -29,5 +37,11 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
+	}
+	
+	.output {
+		flex-grow: 1;
+		align-items: center;
+		display: flex;
 	}
 </style>

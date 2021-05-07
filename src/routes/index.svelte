@@ -1,5 +1,11 @@
 <script context="module">
 	export const prerender = true
+	let query
+
+	export async function load({ page }) {
+		query = page.query.get("q") || ''
+		return true
+	}
 </script>
 
 <script>
@@ -11,7 +17,7 @@
 </svelte:head>
 
 <section>
-	<Input />
+	<Input {query} />
 </section>
 
 <style>
