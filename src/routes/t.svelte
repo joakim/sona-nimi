@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>ilo toki ante – {query}</title>
+	<title>ilo pi sona nimi – {query}</title>
 </svelte:head>
 
 <section>

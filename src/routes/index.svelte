@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>ilo toki ante</title>
+	<title>ilo pi sona nimi</title>
 </svelte:head>
 
 <section>
