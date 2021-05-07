@@ -4,6 +4,6 @@
 	functions = "functions/"
 
 [[redirects]]
-	from = https://toki-ante.netlify.app/*
-	to = https://sona-nimi.netlify.app/:splat
+	from = "https://toki-ante.netlify.app/*"
+	to = "https://sona-nimi.netlify.app/:splat"
 	status = 302
