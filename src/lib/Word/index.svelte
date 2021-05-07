@@ -10,7 +10,6 @@
 .nimi {
 	position: relative;
 	font-style: normal;
-	cursor: crosshair;
 }
 
 .nimi::after {

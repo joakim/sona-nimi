@@ -49,6 +49,7 @@
 	:global(.part) {
 		display: inline-block;
 		font-size: 2em;
+		cursor: crosshair;
 	}
 
 	.ante {
