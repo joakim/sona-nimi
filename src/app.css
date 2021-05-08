@@ -89,12 +89,18 @@ pre {
 }
 
 input,
-button {
+button,
+.button {
 	font-size: inherit;
 	font-family: inherit;
 }
 
-button {
+a.button {
+	display: inline-block;
+}
+
+button,
+.button {
 	background: #3498db;
 	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
 	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -111,14 +117,15 @@ button {
 	text-decoration: none;
 	border: none;
 	cursor: pointer;
-	margin-top: 2em;
 }
 
-button:focus:not(:focus-visible) {
+button:focus:not(:focus-visible),
+.button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-button:hover {
+button:hover,
+.button:hover {
 	background: #3cb0fd;
 	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
 	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -128,7 +135,8 @@ button:hover {
 	text-decoration: none;
 }
 
-button:disabled {
+button:disabled,
+.button:disabled {
 	background: #3498db;
 	opacity: 0.6;
 	cursor: inherit;

@@ -35,4 +35,8 @@
 .input:focus::placeholder {
 	color: transparent;
 }
+
+button {
+	margin-top: 2em;
+}
 </style>
